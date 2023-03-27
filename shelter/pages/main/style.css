@@ -40,7 +40,7 @@ a:hover {
 }
 
 .background {
-    background: url('/assets/images/noise_transparent.png'),
+    background: url('../../assets/images/noise_transparent.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
     color: white;
 }
@@ -69,7 +69,10 @@ a:hover {
     line-height: 15px;
     letter-spacing: 0.1em;
     text-align: left;
-
+    position: relative;
+    top: 33px;
+    left: -357px;
+    padding-bottom: 34px;
 }
 
 .header-nav_list {
@@ -403,7 +406,7 @@ a:hover {
 }
 
 .footer {
-    background: url('/assets/images/noise_transparent.png'),
+    background: url('../../assets/images/noise_transparent.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
     color: white;
 }
