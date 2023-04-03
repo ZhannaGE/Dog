@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" type="text/css">
@@ -13,27 +13,30 @@
 <section class="background">
   <div class="container">
     <header class="header-row">
-      <h1 class="logo">Cozy House</h1>
       <div class="header-logo">
-        <p>Shelter for pets in Boston</p>
+        <a class="logo">Cozy House</a>
+        <p class="header-logo_title">Shelter for pets in Boston</p>
       </div>
-      <div class="header-nav">
-        <nav>
+      <div class="menu-container">
+        <div class="nav-icon menuButton">
+          <span></span>
+        </div>
+        <nav class="header-nav">
           <ul class="header-nav_list">
-            <li class="active"><a href="#">About the shelter</a></li>
-            <li><a href="../../pages/pets">Our pets</a></li>
-            <li><a href="#section-1">Help the shelter</a></li>
-            <li><a href="#section-2">Contacts</a></li>
+            <li class="active"><a>About the shelter</a></li>
+            <li class="nav-item"><a href="../../pages/pets">Our pets</a></li>
+            <li class="nav-item"><a href="#section-1">Help the shelter</a></li>
+            <li class="nav-item"><a href="#section-2">Contacts</a></li>
           </ul>
         </nav>
-      </div>
+  </div>
     </header>
     <div class="not-only_row">
       <div class="not-only_text">
-        <h2 class="not-only_title">Not only people <br> need a house</h2>
+        <h1 class="not-only_title">Not only people <br> need a house</h1>
         <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will
-          love you more than anybody else in the world, you will will see!</p>
-        <form action="#section-4">
+          love you more than anybody else in the world, you will see!</p>
+        <form class="form-not-only" action="#section-4">
           <button class="button">Make a friend</button>
         </form>
       </div>
@@ -66,19 +69,34 @@
 <section id="section-4" class="our-friends">
   <div class="container">
     <div class="slider">
-
       <div class="sliderBtn button-left">
         <button>&larr;</button>
       </div>
       <div class="sliderBtn button-right">
         <button>&rarr;</button>
       </div>
-
       <h3 class="title">Our friends who <br> are looking for a house</h3>
+      <div class="myModal-background myModal">
+        <div class="myModal-body">
 
+          <div class="myModal-row">
+            <div class="closeByX">X</div>
+            <p class="modal-name"></p>
+            <p><span class="modal-kind"></span> - <span class="modal-breed"></span></p>
+            <p class="modal-info"></p>
+          </div>
+          <div class="myModal-list">
+            <ul>
+              <li><b>Age:</b><span class="modal-age"></span></li>
+              <li><b>Inoculations:</b><span class="modal-jab"></span></li>
+              <li><b>Diseases:</b><span class="modal-sick"></span></li>
+              <li><b>Parasites:</b><span class="modal-parasites"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="card-container">
-
-        <div class="card-pet right">
+        <div class="card-pet">
           <div class="card-pet_image">
             <img src="../../assets/images/pets-katrine.png" alt="kl">
           </div>
@@ -86,10 +104,10 @@
             <p>Katrine</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
-        <div class="card-pet right">
+        <div class="card-pet">
           <div class="card-pet_image">
             <img src="../../assets/images/pets-jennifer.png" alt="kl">
           </div>
@@ -97,7 +115,7 @@
             <p>Jennifer</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet">
@@ -108,7 +126,7 @@
             <p>Woody</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet">
@@ -119,7 +137,7 @@
             <p>Sophia</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet">
@@ -130,7 +148,7 @@
             <p>Timmy</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet">
@@ -141,7 +159,7 @@
             <p>Charly</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
       </div>
@@ -175,7 +193,7 @@
           <img src="../../assets/icons/icon-bowls-and-cups.png" alt="kk">
           <p>Bowls and cups</p>
         </div>
-        <div class="help-list_item">
+        <div class="help-list_item no-margin">
           <img src="../../assets/icons/icon-shampoos.png" alt="kk">
           <p>Shampoos</p>
         </div>
@@ -188,10 +206,10 @@
           <p>Medicines</p>
         </div>
         <div class="help-list_item">
-          <img src="../../assets/icons/icon-bowls-and-cups.png" alt="kk">
+          <img src="../../assets/icons/icon-collars-leashes.png" alt="kk">
           <p>Collars / leashes</p>
         </div>
-        <div class="help-list_item">
+        <div class="help-list_item no-margin">
           <img src="../../assets/icons/icon-sleeping-area.png" alt="kk">
           <p>Sleeping areas</p>
         </div>
@@ -209,7 +227,7 @@
       <div class="in-addition_info">
         <h3 class="title">You can also<br> make a donation</h3>
         <p class="in-addition_pay">Name of the bank / Type of bank account</p>
-        <button class="button-pay"><img src="../../assets/icons/credit-card.png" alt="ldl">8380 2880 8028 8791 7435</button>
+        <div class="button-pay"><img src="../../assets/icons/credit-card.png" alt="ldl">8380 2880 8028 8791 7435</div>
         <p class="paragraph-style">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate.
           Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
@@ -221,8 +239,9 @@
 <footer id="section-2" class="footer">
   <div class="container">
     <div class="footer-row">
+      <div class="footer-flex">
       <div class="footer-item-1">
-        <h3 class="title footer-title">For questions<br> and suggestions</h3>
+        <h3 class="title footer-title">For questions and suggestions</h3>
         <div class="footer-connection">
           <a href="mailto:example@example.com">
             <img src="../../assets/icons/icon-email.png" alt="jh">
@@ -237,7 +256,7 @@
         </div>
       </div>
       <div class="footer-item-2">
-        <h3 class="title footer-title">We are waiting <br>for your visit</h3>
+        <h3 class="title footer-title">We are waiting for your visit</h3>
         <div class="footer-location">
           <a href="https://www.google.com/maps/search/?api=1&query=Москва" target="_blank">
             <img src="../../assets/icons/icon-marker.png" alt="jh">
@@ -251,12 +270,14 @@
           </a>
         </div>
       </div>
+      </div>
       <div class="footer-image">
         <img src="../../assets/images/footer-puppy.png" alt="kk">
       </div>
     </div>
   </div>
 </footer>
-<script src="script.js"></script>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>
