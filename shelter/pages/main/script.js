@@ -1,4 +1,4 @@
-import pets from "./pets.json";
+import pets from "./pets.json" assert {type: "json"};
 
 function burgerMenu() {
     const menuButton = document.querySelector('.menuButton');
