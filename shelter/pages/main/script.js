@@ -1,5 +1,4 @@
-
-import pets from "./pets.json";
+import pets from "./pets.json"
 
 
 function burgerMenu() {
