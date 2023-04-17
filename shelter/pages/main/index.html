@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" type="text/css">
@@ -17,6 +17,12 @@
         <a class="logo">Cozy House</a>
         <p class="header-logo_title">Shelter for pets in Boston</p>
       </div>
+
+      <div class="menu-container">
+        <div class="nav-icon menuButton">
+          <span></span>
+        </div>
+        <nav class="header-nav">
       <div class="menuButton">
         <img src="../../assets/icons/Burger.png" alt="burger">
       </div>
@@ -31,6 +37,7 @@
             <li class="nav-item"><a href="#section-2">Contacts</a></li>
           </ul>
         </nav>
+  </div>
     </header>
     <div class="not-only_row">
       <div class="not-only_text">
@@ -76,12 +83,33 @@
       <div class="sliderBtn button-right">
         <button>&rarr;</button>
       </div>
-
       <h3 class="title">Our friends who <br> are looking for a house</h3>
+      <div class="myModal-background myModal">
+        <div class="myModal-body">
+
+          <div class="myModal-row">
+            <div class="closeByX">X</div>
+            <p class="modal-name"></p>
+            <p><span class="modal-kind"></span> - <span class="modal-breed"></span></p>
+            <p class="modal-info"></p>
+          </div>
+          <div class="myModal-list">
+            <ul>
+              <li><b>Age:</b><span class="modal-age"></span></li>
+              <li><b>Inoculations:</b><span class="modal-jab"></span></li>
+              <li><b>Diseases:</b><span class="modal-sick"></span></li>
+              <li><b>Parasites:</b><span class="modal-parasites"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card-pet">
       <div class="card-container">
         <div class="card-pet right"
           data-pet-kind="Cat - British Shorthair"
           data-pet-info="Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.">
+
           <div class="card-pet_image">
             <img src="../../assets/images/pets-katrine.png" alt="kl">
           </div>
@@ -92,7 +120,7 @@
             <button class="openMyModal">Learn more</button>
           </div>
         </div>
-
+        <div class="card-pet">
         <div class="card-pet right hidden-mobile">
           <div class="card-pet_image">
             <img src="../../assets/images/pets-jennifer.png" alt="kl">
@@ -132,7 +160,7 @@
             <p>Woody</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet hidden hidden-desktop">
@@ -143,7 +171,7 @@
             <p>Sophia</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet hidden hidden-desktop">
@@ -154,7 +182,7 @@
             <p>Timmy</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
         <div class="card-pet hidden hidden-desktop">
@@ -165,7 +193,7 @@
             <p>Charly</p>
           </div>
           <div class="card-pet_button">
-            <button>Learn more</button>
+            <button class="openMyModal">Learn more</button>
           </div>
         </div>
       </div>
@@ -285,6 +313,8 @@
 </footer>
 
 
+<script type="module" src="script.js"></script>
+
 <div class="myModal-background myModal">
   <div class="myModal-body">
     <div class="closeByX">X</div>
@@ -305,5 +335,6 @@
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
