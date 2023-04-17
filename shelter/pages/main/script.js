@@ -1,5 +1,4 @@
-import pets from "./pets.json"
-
+import pets from "./pets.json";
 
 function burgerMenu() {
     const menuButton = document.querySelector('.menuButton');
@@ -7,7 +6,6 @@ function burgerMenu() {
     const nav = document.querySelector('.nav-icon');
     const shadow = document.querySelector('.menu-container');
     const menuContainer = document.querySelector('.menu-container');
-
 
     function toggleMenu() {
         document.body.classList.toggle('_lock');
@@ -90,17 +88,12 @@ petsModal()
 
 
 const slider1Config = {
-    slideLength: 0,
-    currentSlide: 0,
-    cardWidth: 0,
-    responsive: {
+    slideLength: 0, currentSlide: 0, cardWidth: 0, responsive: {
         0: {
             slideCount: 1,
-        },
-        768: {
+        }, 768: {
             slideCount: 2,
-        },
-        1100:{
+        }, 1100: {
             slideCount: 3,
         }
     },
@@ -112,11 +105,9 @@ function setScreenWidth() {
 
     if (window.innerWidth < 768) {
         SCREEN_WIDTH = 0;
-    }
-   else if(window.innerWidth > 768 && window.innerWidth < 1100) {
+    } else if (window.innerWidth > 768 && window.innerWidth < 1100) {
         SCREEN_WIDTH = 768;
-    }
-   else {
+    } else {
         SCREEN_WIDTH = 1100;
     }
 }
