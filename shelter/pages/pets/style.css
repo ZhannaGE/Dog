@@ -32,7 +32,9 @@ a, a:link, a:visited {
 a:hover {
     text-decoration: none;
 }
-
+button{
+    color: black;
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -144,12 +146,13 @@ a:hover {
 .listPage li{
     background-color: #ffffffBD;
     padding:20px;
+    border-radius: 40px;
     display: inline-block;
     margin:0 10px;
     cursor: pointer;
 }
 .listPage .active{
-    background-color: #B192EF;
+    background-color: #F1CDB3;
     color:#fff;
 }
 
