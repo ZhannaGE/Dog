@@ -1,6 +1,5 @@
 import pets from "./pets.json" assert {type: "json"};
 
-
 function burgerMenu() {
     const menuButton = document.querySelector('.menuButton');
     const mobileMenu = document.querySelector('.header-nav');
