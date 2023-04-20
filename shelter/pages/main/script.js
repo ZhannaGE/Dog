@@ -97,7 +97,6 @@ let pets = [
     },
 ];
 
-
 function burgerMenu() {
     const menuButton = document.querySelector('.menuButton');
     const mobileMenu = document.querySelector('.header-nav');
