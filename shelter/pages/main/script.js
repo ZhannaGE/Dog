@@ -188,6 +188,7 @@ petsModal()
 const slider1Config = {
     slideLength: 0,
     currentSlide: 0,
+    currentSlideBlock: 0,
     cardWidth: 0,
     responsive: {
         0: {
@@ -225,27 +226,39 @@ function initSlider(slider, state) {
 
     function sliderSetup() {
         setScreenWidth();
-        state.width = slider.offsetWidth - 2;
+        console.log(SCREEN_WIDTH)
+
+        state.width = slider.offsetWidth;
         state.slideLength = cardSlides.length;
         state.cardWidth = state.width / state.responsive[SCREEN_WIDTH].slideCount;
-        cardSlides.forEach(function (card) {
-        })
+
         const slideLineWidth = state.cardWidth * cardSlides.length;
         slideLine.style.width = slideLineWidth + 'px';
+        console.log(state)
     }
 
     sliderSetup();
 
     function moveSlider(direction) {
-        if (direction === "next" && state.currentSlide < state.slideLength - state.responsive[0].slideCount) {
+
+        const maxLimit = state.slideLength - state.responsive[SCREEN_WIDTH].slideCount;
+        console.log(maxLimit)
+
+        // TODO: изменить условия чтобы ограничение шло по группе слайдов (а не одному слайду)
+        if (direction === "next" && state.currentSlide < state.slideLength - state.responsive[SCREEN_WIDTH].slideCount) {
+            state.currentSlideBlock++;
             state.currentSlide = state.currentSlide + state.responsive[SCREEN_WIDTH].slideCount;
         }
         if (direction === "prev" && state.currentSlide > 0) {
+            state.currentSlideBlock--;
             state.currentSlide = state.currentSlide - state.responsive[SCREEN_WIDTH].slideCount;
         }
 
-        const slideShift = state.currentSlide * state.cardWidth;
+        // TODO: проверить смещение ленты слайдеры при ресайзе
+        const slideShift = state.currentSlideBlock * state.width;
         slideLine.style.transform = "translate(-" + slideShift + "px ,0)";
+
+        console.log(state)
     }
 
     btnRight.addEventListener('click', function () {
